@@ -96,7 +96,7 @@ public class InStream extends Thread
 				if(stopping)
 					return;
 			}
-			e.printStackTrace();
+//			e.printStackTrace();
 		}	
 	}
 	

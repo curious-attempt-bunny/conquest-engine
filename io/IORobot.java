@@ -90,6 +90,7 @@ public class IORobot implements Robot
 				long timeNow = System.currentTimeMillis();
 				long timeElapsed = timeNow - timeStart;
 				line = handler.readLine(timeOut);
+                System.out.println("<< "+line);
 				dump.append(line + "\n");
 				if(timeElapsed >= timeOut)
 					break;
@@ -112,10 +113,12 @@ public class IORobot implements Robot
 	@Override
 	public void writeInfo(String info){
 		handler.writeLine(info);
+        System.out.println(">> "+info);
 		dump.append(info + "\n");
 	}
 
 	public void addToDump(String dumpy){
+        System.out.println(">> "+dumpy);
 		dump.append(dumpy);
 	}
 
