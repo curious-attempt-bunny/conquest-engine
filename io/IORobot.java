@@ -113,12 +113,11 @@ public class IORobot implements Robot
 	@Override
 	public void writeInfo(String info){
 		handler.writeLine(info);
-        System.out.println(">> "+info);
 		dump.append(info + "\n");
 	}
 
 	public void addToDump(String dumpy){
-        System.out.println(">> "+dumpy);
+        System.out.println("> "+dumpy);
 		dump.append(dumpy);
 	}
 

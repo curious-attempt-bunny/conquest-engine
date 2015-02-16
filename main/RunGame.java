@@ -319,6 +319,7 @@ public class RunGame
 		// System.out.println(setupRegionsString);
 		bot.writeInfo(setupNeighborsString);
 		// System.out.println(setupNeighborsString);
+        bot.writeInfo("setup_map wastelands");
 	}
 	
 	private String getSuperRegionsString(Map map)

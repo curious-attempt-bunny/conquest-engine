@@ -61,12 +61,15 @@ public class IOHandler {
 	{
 		if(!isRunning()) { return null; }
 		try { in.flush(); } catch(IOException e) {}
-		return out.readLine(timeOut);
+        String line = out.readLine(timeOut);
+        System.out.println("<< "+line);
+        return line;
 	}
 	
 	public boolean writeLine(String line)
 	{
 		if(!isRunning()) { return false; }
+        System.out.println(">> "+line);
 		try { 
 			in.writeLine(line.trim());
 			return true;
